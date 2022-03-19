@@ -10,15 +10,15 @@
 
 ## 当前Linux内核版本信息
 ### 输入命令'cat/proc/version'可查看到正在运行的Linux内核版本是**5.4.0**
-### 以上信息如图所示：![版本信息](Screenshot\version-information.png)
+### 以上信息如图所示：![版本信息](chap0x01\Screenshot\version-information.png)
 
 
 --
 # 2.Virtualbox安装完Ubuntu之后新添加的网卡如何实现系统开机自动启动和自动获取IP？
 
-### 通过命令'ifconfig -a'可以看到全部的网卡，但有些网卡可能没有工作，说明没有出现的网卡就是没有生效的，所有网卡如图所示：![所有网卡](Screenshot\all-netcard.png)
+### 通过命令'ifconfig -a'可以看到全部的网卡，但有些网卡可能没有工作，说明没有出现的网卡就是没有生效的，所有网卡如图所示：![所有网卡](chap0x01\Screenshot\all-netcard.png)
 
-### 通过命令'ifconfig'可以查看到工作网卡，工作网卡如图所示：![工作网卡](Screenshot\work-netcard.png)
+### 通过命令'ifconfig'可以查看到工作网卡，工作网卡如图所示：![工作网卡](chap0x01Screenshot\work-netcard.png)
 
 ### 系统使用**netplan**管理网络，vim打开文件'sudo vim /ect/netplan/00-installer-config.yaml'看到网卡是否开启dhch地址分配，没有则需要手动加入。最后执行'sudo netplan apply'生效。
 
